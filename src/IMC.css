@@ -1,0 +1,114 @@
+
+.main-imc {
+  font-family: Lexend;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+
+
+.form-container {
+  width: 60vh;
+  padding: 20px;
+  border-radius: 8px;           
+  text-align: center;
+}
+
+
+h2 {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+
+.form-group {
+  margin: 4vh 0;
+  text-align: left;
+}
+
+input[type="text"], input[type="number"] {
+  width: 100%;
+  padding: 1.20vh;
+  border: 1px solid #ccc;
+  border-radius: 1vh;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: center;
+}
+
+.gender-selection{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+}
+
+.gender-selection:not(:last-child){
+  margin-right: 20vh;
+}
+
+
+.button-imc {
+  width: 100%;
+  padding: 10px;
+  background-color: #344E41;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-imc:hover {
+  background-color: #A3B18A;
+}
+.botoes-main-escolha{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo-botoes-escolha{
+  margin: 10vh 0; 
+  font-family: Lexend;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20vh;
+}
+
+.button-group{
+  display: flex;
+  justify-content: center;
+  align-items: center;;
+}
+.button-group1{
+  background-color: #e0e9d2;
+  margin: 0 15vh;
+  border-radius: 5vh;
+  border: 2px solid #7279723a
+}
+.button-choice{
+  font-family: Lexend;
+  font-size: 4vh;
+  color: white;
+  margin: 5vh 6vh;
+  border: 0;  
+  border-radius: 2vh;
+  background-color: #344E41;
+  padding: 4vh;
+  transition: all 0.3s ease;
+}
+.button-choice:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+}

@@ -1,0 +1,37 @@
+.pratos_tab {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.pratos_tab h1 {
+    font-size: 32px;
+    font-weight: 500;
+    margin-top: 3vh;
+}
+
+.pratos_grid {
+    margin: 4vh 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5vh 12vh;
+}
+
+.main_button {
+    font-family: Lexend;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    background-color: #344E41;
+    border: 1px black solid;
+    border-radius: 10px;
+    padding: 1vh 8vh;
+    transition: all 0.3s ease;
+}
+
+.main_button:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+} 

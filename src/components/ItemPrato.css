@@ -1,0 +1,49 @@
+.grid_item {
+    background-color: #90a77d57;
+    padding: 20px 40px;
+    text-align: center;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.grid_item img {
+    width: 177px;
+    height: 137px;
+    border-radius: 10px;
+    margin: 1vh;
+}
+
+.grid_item h2 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.grid_item h3 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.grid_item:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+    background-color: #90a77d83;
+}
+
+.avaliacao_item {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #90a77d2a;
+    border-radius: 15px;
+    padding: 5px;
+  }
+  
+  .avaliacao_estrelas_item span {
+    margin: 0 2px;
+    transition: color 0.3s ease;
+    font-size: 25px;
+  }
+  
+  .avaliacao_estrelas_item span:hover {
+    color: orange;
+  }
