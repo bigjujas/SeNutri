@@ -1,8 +1,9 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
+import { Link } from "react-router-dom";
 import './Header.css';
 
 export function Header() {
-
 
   return (
     <>
@@ -10,9 +11,9 @@ export function Header() {
         <h1>Se<span>Nutri</span>™</h1>
         <nav className='main_navbar'>
           <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Pratos</a></li>
-            <li><a href="">IMC</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/pratos">Pratos</Link></li>
+            <li><Link to="/IMC">Monte sua Dieta</Link></li>
             <li><a href="">Time</a></li>
           </ul>
         </nav>

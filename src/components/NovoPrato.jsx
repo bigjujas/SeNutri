@@ -1,7 +1,9 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import { useForm } from 'react-hook-form'
 import "./NovoPrato.css"
 
-export function NovoPrato({ pratos, setPratos }) {
+export function NovoPrato({ pratos, setPratos, setOpen }) {
     const { register, handleSubmit } = useForm()
 
     function salvaPrato(data) {
@@ -15,6 +17,7 @@ export function NovoPrato({ pratos, setPratos }) {
         }
 
         const pratos2 = [novo, ...pratos]
+        setOpen(false)
         setPratos(pratos2)
         localStorage.setItem("pratos", JSON.stringify(pratos2))
     }
@@ -33,8 +36,8 @@ export function NovoPrato({ pratos, setPratos }) {
                     <p>
                         <label htmlFor="type">Tipo:</label>
                         <select id="type" {...register("type")} required>
-                            <option value="Perda">Perder Peso</option>
-                            <option value="Ganho">Ganhar Peso</option>
+                            <option value="perda">Perder Peso</option>
+                            <option value="ganho">Ganhar Peso</option>
                         </select>
                     </p>
                     <p>

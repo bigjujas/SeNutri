@@ -1,15 +1,25 @@
-import { Pratos } from './Pratos.jsx'
-import { Header } from './components/Header.jsx'
-import './App.css'
+/* eslint-disable no-unused-vars */
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Pratos from "./Pratos"
+import IMC from "./IMC"
 
-function App() {
-
+export default function App() {
   return (
-    <>
+    <Router>
       <Header />
-      <Pratos />
-    </>
-  )
+      <Routes>
+        <Route path="/" element={<AppContent />} />
+        {/* Outras rotas */}
+        <Route path="/pratos" element={<Pratos />} />
+        <Route path="/IMC" element={<IMC />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+// FAZER O HTML AQUI 
+function AppContent() {
+  return <h2>Bem-vindo! Este é o conteúdo principal do App.</h2>;
+}

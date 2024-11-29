@@ -1,50 +1,66 @@
 [
   {
     "name": "Strogonoff de Cria1",
-    "type": "Perda",
+    "type": "ganho",
     "description": "10 franguinho e um creme de leite com ARROZ (bom botar batata palha)",
     "calories": "1000",
-    "image": "https://static.itdg.com.br/images/640-440/7e781068a839f15cdf1c85f18b3ea9d6/332854-original-1-1-.jpg",
+    "image": "https://simplelivingrecipes.com/wp-content/uploads/2020/02/Brazilian-Stroganoff-.jpg",
     "stars": 0
   },
   {
     "name": "Strogonoff de Cria2",
-    "type": "Perda",
+    "type": "ganho",
     "description": "10 franguinho e um creme de leite com ARROZ (bom botar batata palha)",
     "calories": "1000",
-    "image": "https://static.itdg.com.br/images/640-440/7e781068a839f15cdf1c85f18b3ea9d6/332854-original-1-1-.jpg",
+    "image": "https://simplelivingrecipes.com/wp-content/uploads/2020/02/Brazilian-Stroganoff-.jpg",
     "stars": 0
   },
   {
     "name": "Strogonoff de Cria3",
-    "type": "Perda",
+    "type": "ganho",
     "description": "10 franguinho e um creme de leite com ARROZ (bom botar batata palha)",
     "calories": "1000",
-    "image": "https://static.itdg.com.br/images/640-440/7e781068a839f15cdf1c85f18b3ea9d6/332854-original-1-1-.jpg",
+    "image": "https://simplelivingrecipes.com/wp-content/uploads/2020/02/Brazilian-Stroganoff-.jpg",
     "stars": 0
   },
   {
     "name": "Strogonoff de Cria4",
-    "type": "Perda",
+    "type": "ganho",
     "description": "10 franguinho e um creme de leite com ARROZ (bom botar batata palha)",
     "calories": "1000",
-    "image": "https://static.itdg.com.br/images/640-440/7e781068a839f15cdf1c85f18b3ea9d6/332854-original-1-1-.jpg",
+    "image": "https://simplelivingrecipes.com/wp-content/uploads/2020/02/Brazilian-Stroganoff-.jpg",
     "stars": 0
   },
   {
-    "name": "Strogonoff de Cria5",
-    "type": "Perda",
-    "description": "10 franguinho e um creme de leite com ARROZ (bom botar batata palha)",
-    "calories": "1000",
-    "image": "https://static.itdg.com.br/images/640-440/7e781068a839f15cdf1c85f18b3ea9d6/332854-original-1-1-.jpg",
+    "name": "Salada de Cria",
+    "type": "perda",
+    "description": "Saladinha cheia de coisas verdes",
+    "calories": "100",
+    "image": "https://images.ecycle.com.br/wp-content/uploads/2022/01/19181441/anna-pelzer-IGfIGP5ONV0-unsplash-scaled.jpg.webp",
     "stars": 0
   },
   {
-    "name": "Strogonoff de Cria6",
-    "type": "Perda",
-    "description": "10 franguinho e um creme de leite com ARROZ (bom botar batata palha)",
-    "calories": "1000",
-    "image": "https://static.itdg.com.br/images/640-440/7e781068a839f15cdf1c85f18b3ea9d6/332854-original-1-1-.jpg",
+    "name": "Salada de Cria2",
+    "type": "perda",
+    "description": "Saladinha cheia de coisas verdes",
+    "calories": "100",
+    "image": "https://images.ecycle.com.br/wp-content/uploads/2022/01/19181441/anna-pelzer-IGfIGP5ONV0-unsplash-scaled.jpg.webp",
+    "stars": 0
+  },
+  {
+    "name": "Salada de Cria3",
+    "type": "perda",
+    "description": "Saladinha cheia de coisas verdes",
+    "calories": "100",
+    "image": "https://images.ecycle.com.br/wp-content/uploads/2022/01/19181441/anna-pelzer-IGfIGP5ONV0-unsplash-scaled.jpg.webp",
+    "stars": 0
+  },
+  {
+    "name": "Salada de Cria4",
+    "type": "perda",
+    "description": "Saladinha cheia de coisas verdes",
+    "calories": "100",
+    "image": "https://images.ecycle.com.br/wp-content/uploads/2022/01/19181441/anna-pelzer-IGfIGP5ONV0-unsplash-scaled.jpg.webp",
     "stars": 0
   }
 ]

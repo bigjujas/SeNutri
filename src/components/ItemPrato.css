@@ -1,13 +1,14 @@
 .grid_item {
     background-color: #90a77d57;
-    padding: 20px 40px;
+    padding: 10px 35px;
     text-align: center;
     border-radius: 20px;
     transition: all 0.3s ease;
 }
 
 .grid_item img {
-    width: 177px;
+    object-fit: cover;
+    width: 167px;
     height: 137px;
     border-radius: 10px;
     margin: 1vh;
@@ -15,7 +16,8 @@
 
 .grid_item h2 {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 800;
+    color: #2d442c;
 }
 
 .grid_item h3 {
@@ -36,6 +38,7 @@
     background-color: #90a77d2a;
     border-radius: 15px;
     padding: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
   }
   
   .avaliacao_estrelas_item span {
