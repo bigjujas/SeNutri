@@ -1,0 +1,63 @@
+.main_footer {
+    height: 10vh;
+    background-color: #a3b18ac9;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3vh;
+    padding: 0 15vh;
+    position: relative;
+}
+
+.footer_contacts {
+    display: flex;
+    gap: 3vh;
+}
+
+.footer_name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.footer_contacts h2 {
+    font-style: italic;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.footer_contacts p {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+}
+
+.footer_name h1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+
+.footer_name h1 span {
+    font-weight: 900;
+}
+
+.footer_name p {
+    text-align: center;
+    font-size: 10px;
+    color: white;
+}
+
+.footer_icons {
+    display: flex;
+    gap: 5px;
+    color: white;
+    font-size: 32px;
+}

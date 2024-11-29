@@ -5,7 +5,7 @@
   padding: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  height: 85vh;
 }
 
 
@@ -23,8 +23,8 @@
   margin-bottom: 20px;
   font-size: 30px;
   font-weight: 800;
-  color: #588157;
-  margin-top: 8vh;
+  color: #588157; 
+  margin-top: 10vh;
 }
 
 
@@ -68,7 +68,7 @@
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
 }
 
 .button-imc:hover {
