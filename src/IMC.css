@@ -74,28 +74,31 @@
 .button-imc:hover {
   background-color: #A3B18A;
 }
+
 .botoes-main-escolha{
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 85vh;
 }
 
 .titulo-botoes-escolha{
+  color: #588157;
   margin: 10vh 0; 
   font-family: Lexend;
   font-size: 40px;
-  font-weight: bold;
+  font-weight: 900;
   margin-bottom: 20vh;
 }
 
 .button-group{
   display: flex;
   justify-content: center;
-  align-items: center;;
+  align-items: center;
 }
 .button-group1{
   background-color: #e0e9d2;
-  margin: 0 15vh;
+  margin: 0 8vh;
   border-radius: 5vh;
   border: 2px solid #7279723a
 }

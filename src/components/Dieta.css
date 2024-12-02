@@ -1,0 +1,152 @@
+.dieta_tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 85vh;
+}
+
+.dieta_tab h1 {
+    color: #588157;
+    font-size: 40px;
+    font-weight: 800;
+    margin-top: 3vh;
+}
+
+.dieta_tab h2 {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.dieta_tab h2 span {
+    color: #375237;
+    font-style: italic;
+}
+
+.dieta_pratos {
+    display: flex;
+    gap: 5vh;
+    justify-content: center;
+    margin: 3vh;
+}
+
+.prato_dieta {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #375237ef;
+    padding: 15px;
+    border-radius: 2rem;
+    font-size: 24px;
+    font-weight: 700;
+    width: 40vh;
+    height: 43vh;
+}
+
+.prato_dieta button {
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    color: white;
+    font-family: Lexend;
+    background-color: #4d744def;
+    border: 0;
+    padding: 5px 20px;
+    margin: 5px;
+    border: #23492e 1px solid;
+}
+
+.prato_dieta button:hover {
+    background-color: #5f915fef;
+}
+
+.prato_selecionado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #e4ffe4;
+    background-color: #588157;
+    padding: 5px;
+    border-radius: 1.5rem;
+}
+
+.prato_selecionado h4 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 2vh;
+}
+
+.prato_selecionado img {
+    object-fit: cover;
+    height: 200px;
+    width: 275px;
+    border-radius: 2rem;
+    margin: 1vh;
+    border: #3d5a3c60 10px solid;
+}
+
+.prato_selecionado p {
+    color: #d6ffd6;
+    font-style: italic;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.dieta_tab h5 {
+    margin-top: 5vh;
+    font-size: 26px;
+    font-weight: 700;
+    background-color: #afccae;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: #3752376b 3px solid;
+}
+
+.dieta_tab h5 span {
+    font-size: 30px;
+    font-style: italic;
+    color: #375237;
+    font-weight: 900;
+}
+
+.dieta_calorias {
+    display: flex;
+    gap: 15vh;
+}
+
+.warning {
+    color: #c74141;
+    margin-top: 3vh;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.warning_background {
+    background-color: #c75e5e !important;
+    color: white;
+}
+
+.warning_background span {
+    color: white !important;
+}
+
+.modal_dieta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dieta_modal_title {
+    font-size: 30px;
+    font-weight: 800;
+    color: #375237;
+}
+
+.modal_pratos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2vh;
+    margin: 2vh;
+}

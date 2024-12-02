@@ -1,8 +1,13 @@
 import { useState } from 'react';
+import Dieta from './components/Dieta'
+import Pratos from '/src/Pratos'
 import './IMC.css';
 
 const IMC = () => {
   const [currentTab, setCurrentTab] = useState(1);
+  const [imc, setIMC] = useState();
+  const [tipoDieta, setTipoDieta] = useState("")
+
   const [formData, setFormData] = useState({
     name: '',
     age: '',
@@ -16,14 +21,16 @@ const IMC = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const trocarTab = () => {
-    setCurrentTab(3);
+  const selecionarTipo = (tipo) => {
+    setTipoDieta(tipo);
+    setCurrentTab(3)
   };
 
   const calculateIMC = () => {
     const { height, weight } = formData;
     if (height && weight) {
-      const imc = (weight / (height * height)).toFixed(2);
+      const newImc = (weight / (height * height)).toFixed(2);
+      setIMC(newImc);
       setCurrentTab(2);
     } else {
       alert('Por favor, preencha os campos corretamente.');
@@ -72,13 +79,17 @@ const IMC = () => {
           <h1 className="titulo-botoes-escolha">Qual o seu objetivo?</h1>
           <div className="button-group">
             <div className="button-group1">
-              <button type='button' onClick={trocarTab} className='button-choice'>Perder peso</button>
+              <button type='button' onClick={() => selecionarTipo("Perda")} className='button-choice'>Perder peso</button>
             </div>
             <div className="button-group1">
-              <button type='button' onClick={trocarTab} className='button-choice'>Ganhar peso</button>
+              <button type='button' onClick={() => selecionarTipo("Ganho")} className='button-choice'>Ganhar peso</button>
             </div>
           </div>
         </div>
+      )}
+
+      {currentTab === 3 && (
+        <Dieta imc={imc} tipoDieta={tipoDieta} />
       )}
     </>
   );
