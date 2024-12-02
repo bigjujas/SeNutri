@@ -13,8 +13,9 @@
 }
 
 .dieta_tab h2 {
-    font-size: 26px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 600;
+    font-style: italic;
 }
 
 .dieta_tab h2 span {
@@ -39,8 +40,7 @@
     border-radius: 2rem;
     font-size: 24px;
     font-weight: 700;
-    width: 40vh;
-    height: 43vh;
+    height: fit-content;
 }
 
 .prato_dieta button {
@@ -93,10 +93,11 @@
 }
 
 .dieta_tab h5 {
+    color: white;
     margin-top: 5vh;
     font-size: 26px;
     font-weight: 700;
-    background-color: #afccae;
+    background-color: #5a7258;
     padding: 1rem;
     border-radius: 1rem;
     border: #3752376b 3px solid;
@@ -105,7 +106,7 @@
 .dieta_tab h5 span {
     font-size: 30px;
     font-style: italic;
-    color: #375237;
+    color: #bdffb7;
     font-weight: 900;
 }
 

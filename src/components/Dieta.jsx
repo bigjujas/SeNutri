@@ -91,7 +91,7 @@ export function Dieta({ imc, tipoDieta }) {
         <>
             <div className="dieta_tab">
                 <h1>Monte sua Dieta</h1>
-                <h2>Seu gasto calórico estimado: <span>{imc} kcal</span></h2>
+                <h2>Seu gasto calórico estimado: <span>{Math.round(imc)} kcal</span></h2>
                 <div className="dieta_pratos">
                     {["breakfast", "lunch", "afternoon", "dinner"].map((refeicao) => (
                         <div className="prato_dieta" key={refeicao}>
@@ -104,7 +104,7 @@ export function Dieta({ imc, tipoDieta }) {
                             {selectedPratos[refeicao] && (
                                 <div className="prato_selecionado">
                                     <h4>{selectedPratos[refeicao].name}</h4>
-                                    <img src={selectedPratos[refeicao].image} alt="" />
+                                    <img src={selectedPratos[refeicao].image} draggable="false" alt="" />
                                     <p>{selectedPratos[refeicao].calories} kcal</p>
                                 </div>
                             )}
