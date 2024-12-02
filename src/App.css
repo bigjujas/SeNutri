@@ -1,16 +1,121 @@
-.home_tab {
+.banner_principal {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 85vh;
 }
 
-.home_tab h1 {
-    color: white;
-    background-color: #a3b18ac9;
-    padding: 10vh;
-    border-radius: 1rem;
-    font-size: 32px;
-    font-weight: 900;
+.texto__banner p{
+    width: 550px;
+    margin-right: 7em;
+    margin-bottom: 3em;
+    color: #3A5A40;
+    font-family: "Libre Caslon Text";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.conhecer__button{
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 277px;
+    height: 59px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    border: none;
+    background: #344E41;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.conhecer__button a{
+    color: #FFF;
+    text-decoration: none;
+    font-family: "Lexend";
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.conhecer__button:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    background-color: #476958;
+}
+
+.main__container{
+    display: flex;
+    flex-direction: column;
+    
+    background: #E2E9DB;
+
+}
+
+.texto__main{
+    justify-content: center;
+    width: 550px;
+    text-align: center;
+    margin: 3em auto;
+}
+
+.titulo__main{
+    color: #344E41;
+    font-family: "Lexend";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 1em;
+
+}
+
+.texto__main p{
+    color: #000;
+    text-align: center;
+    font-family: "Lexend";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+.card__pessoa{
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em auto;
+    gap: 1em;
+}
+.card__pessoa h3{
+    color: #2D4632;
+    font-family: "Libre caslon text";
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    
+}
+
+.card__pessoa{
+    color: #344E41;
+    font-family: Lexend;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 3em;
+
+}
+.card__pessoa img{
+    width: 400px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.39);
 }
