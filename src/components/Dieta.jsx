@@ -5,7 +5,6 @@ import './Dieta.css';
 import './NovoPrato.css';
 
 export function Dieta({ imc, tipoDieta }) {
-    // Estado para armazenar os pratos escolhidos para cada refeição
     const [selectedPratos, setSelectedPratos] = useState({
         breakfast: null,
         lunch: null,
@@ -13,19 +12,18 @@ export function Dieta({ imc, tipoDieta }) {
         dinner: null,
     });
 
-    // Estado para controlar a abertura do modal
     const [openModal, setOpenModal] = useState(false);
     const [pratos, setPratos] = useState([]);
-
     const [imcDieta, setImcDieta] = useState();
 
-    // Carregar pratos do localStorage
+    // Carregar pratos do servidor
     useEffect(() => {
-        const pratosLocalStorage = localStorage.getItem("pratos");
-        if (pratosLocalStorage) {
-            const pratosArray = JSON.parse(pratosLocalStorage);
+        async function fetchPratos() {
+            const response = await fetch("http://localhost:3000/pratos");
+            const pratosArray = await response.json();
             setPratos(pratosArray);
         }
+        fetchPratos();
     }, []);
 
     // Função para abrir o modal
@@ -46,7 +44,6 @@ export function Dieta({ imc, tipoDieta }) {
     // Função para calcular o total de calorias
     const calcularTotalCalorias = () => {
         return Object.values(selectedPratos).reduce((total, prato) => {
-            // Verificar se o prato é válido e se a propriedade calories é um número
             if (prato && !isNaN(prato.calories)) {
                 return total + prato.calories;
             }
@@ -63,14 +60,14 @@ export function Dieta({ imc, tipoDieta }) {
         } else {
             setImcDieta(Math.round(imc - 300));
         }
-    }
+    };
 
     useEffect(() => {
         IMCrecomendado();
     }, [imc, tipoDieta]);
 
     const deveExibirAviso = () => {
-        if (totalCalorias === 0) return { showWarning: false, className: "" }; // Não exibe o aviso quando totalCalorias for 0
+        if (totalCalorias === 0) return { showWarning: false, className: "" };
 
         if (tipoDieta === "Ganho") {
             return {
@@ -85,7 +82,6 @@ export function Dieta({ imc, tipoDieta }) {
         }
         return { showWarning: false, className: "" };
     };
-
 
     return (
         <>
@@ -130,7 +126,7 @@ export function Dieta({ imc, tipoDieta }) {
                     <h2 className="dieta_modal_title">Escolha um prato</h2>
                     <div className="modal_pratos">
                         {pratos.map((prato) => (
-                            <div key={prato.name} className="prato-item" onClick={() => selecionarPrato(selectedPratos.currentRefeicao, prato)}>
+                            <div key={prato.id} className="prato-item" onClick={() => selecionarPrato(selectedPratos.currentRefeicao, prato)}>
                                 <Prato prato={prato} pratos={pratos} />
                             </div>
                         ))}

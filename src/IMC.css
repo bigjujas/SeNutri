@@ -117,3 +117,50 @@
   cursor: pointer;
   transform: scale(1.05);
 }
+
+@media screen and (max-width:450px) {
+
+  .form-container {
+    width: 30vh;
+    padding: 10px;
+    border-radius: 0;           
+    text-align: center;
+  }
+    .form-group {
+      margin: 3vh 0;
+    }
+    .gender-selection{
+      display: flex;
+      align-items: center;
+      gap: 0;
+      font-weight: bold; 
+    }
+    .gender-selection:not(:last-child){
+      margin-right: 2vh;
+    }
+    
+    .titulo-botoes-escolha{
+      margin: 10vh 0; 
+      font-family: Lexend;
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 20vh;
+    }
+    
+    .button-group{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;;
+    }
+    .button-group1{
+      margin-bottom: 3vh;
+    }
+    .button-choice{
+      font-size: 3vh;
+      margin: 1vh 1vh;
+      border: 0;  
+      border-radius: 3vh;
+      padding: 3vh 3vh;
+    }
+  }

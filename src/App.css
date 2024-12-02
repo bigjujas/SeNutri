@@ -119,3 +119,74 @@
     width: 400px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.39);
 }
+
+@media screen and (max-width:450px) {
+    .banner_principal {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .banner_principal img {
+        width: 300px;
+        margin: 0 auto; /* Adicionado para centralizar a imagem */
+    }
+    .texto__banner p {
+        width: 200px;
+        margin: 0 auto; /* Mudado para centralizar o parágrafo */
+        margin-top: 2em;
+        margin-bottom: 1em;
+        font-size: 16px;
+    }
+    
+    .conhecer__button {
+        font-size: 20px;
+        width: 200px;
+        height: 40px;
+        border-radius: 15px;
+        margin: 0 auto; /* Adicionado para centralizar o botão */
+    }
+    
+    .conhecer__button a {
+        font-size: 16px;
+    }
+    
+    .main__container{
+        display: flex;
+        flex-direction: column;
+
+    }
+    
+    .texto__main{
+        width: 300px;
+    }
+    
+    .titulo__main{
+        font-size: 30px;
+        margin-bottom: 1em;
+    }
+    
+    .texto__main p {
+        margin: 0 auto;
+    }
+    .card__pessoa {
+        width: 100%;
+        max-width: 310px;
+        gap: 2em;
+    }
+
+    .card__pessoa h3 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .card__pessoa {
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 4em;
+        text-align: center;
+    }
+    .card__pessoa img {
+        width: 100%; 
+        max-width: 300px; 
+        margin: 0 auto;
+    }
+}

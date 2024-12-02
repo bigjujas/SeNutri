@@ -62,3 +62,25 @@
     color: white;
     font-size: 32px;
 }
+
+@media screen and (max-width:450px) {
+    .main_footer {
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 13vh;
+    }
+    
+    .footer_contacts {
+        flex-direction: column;
+        gap: 3vh;
+    }
+    .footer_icons {
+        display: flex;
+        gap: 2px;
+        color: white;
+        font-size: 30px;
+    }
+    }

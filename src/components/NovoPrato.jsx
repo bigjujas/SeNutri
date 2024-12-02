@@ -6,20 +6,32 @@ import "./NovoPrato.css"
 export function NovoPrato({ pratos, setPratos, setOpen }) {
     const { register, handleSubmit } = useForm()
 
-    function salvaPrato(data) {
+    // Função para salvar o prato no servidor
+    async function salvaPrato(data) {
         const novo = {
             name: data.name,
             type: data.type,
             description: data.description,
-            calories: data.calories,
+            calories: Number(data.calories),
             image: data.image,
             stars: 0,
         }
 
-        const pratos2 = [novo, ...pratos]
-        setOpen(false)
-        setPratos(pratos2)
-        localStorage.setItem("pratos", JSON.stringify(pratos2))
+        // Enviar o novo prato para a API (json-server)
+        const response = await fetch("http://localhost:3000/pratos", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(novo),
+        });
+        const pratoAdicionado = await response.json();
+
+        // Atualizar o estado de pratos com o prato adicionado
+        setPratos([pratoAdicionado, ...pratos]);
+
+        // Fechar o modal
+        setOpen(false);
     }
 
     return (

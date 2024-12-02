@@ -12,30 +12,46 @@ export function Pratos() {
   const [selectedType, setSelectedType] = useState("todos");
 
   useEffect(() => {
-    if (localStorage.getItem("pratos")) {
-      const pratos2 = JSON.parse(localStorage.getItem("pratos"));
-      setPratos(pratos2);
+    async function fetchPratos() {
+      const response = await fetch("http://localhost:3000/pratos");
+      const data = await response.json();
+      setPratos(data);
     }
+    fetchPratos();
   }, []);
 
-  function excluirPrato() {
-    const pratosAtualizados = pratos.filter((prato) => prato.name !== selectedPrato.name);
-    setPratos(pratosAtualizados);
-    localStorage.setItem("pratos", JSON.stringify(pratosAtualizados)); // Atualiza o localStorage
-    setSelectedPrato(null);
-    setOpen(false);
+  async function excluirPrato() {
+    // Para excluir o prato, podemos usar o nome como identificador, mas isso pode não ser ideal se houver pratos com o mesmo nome
+    const pratoParaExcluir = pratos.find(prato => prato.name === selectedPrato.name);
+    if (pratoParaExcluir) {
+      await fetch(`http://localhost:3000/pratos/${pratoParaExcluir.id}`, { method: "DELETE" });
+      const pratosAtualizados = pratos.filter((prato) => prato.name !== selectedPrato.name);
+      setPratos(pratosAtualizados);
+      setSelectedPrato(null);
+      setOpen(false);
+    }
   }
 
-  // Função de filtro que retorna pratos de acordo com o tipo (Perda, Ganho ou Todos)
+  async function avaliarPrato(novaNota) {
+    const pratoAtualizado = { ...selectedPrato, stars: novaNota };
+    await fetch(`http://localhost:3000/pratos/${selectedPrato.id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(pratoAtualizado),
+    });
+    const pratosAtualizados = pratos.map((prato) =>
+      prato.name === selectedPrato.name ? pratoAtualizado : prato
+    );
+    setPratos(pratosAtualizados);
+    setSelectedPrato(pratoAtualizado);
+  }
+
   const pratosFiltrados = selectedType === "todos"
     ? pratos
     : pratos.filter(prato => prato.type === selectedType);
 
   const itemsPratos = pratosFiltrados.map((prato) => (
-    <div key={prato.name} onClick={() => {
-      setSelectedPrato(prato);
-      setOpen(true);
-    }}>
+    <div key={prato.id} onClick={() => { setSelectedPrato(prato); setOpen(true); }}>
       <Prato prato={prato} pratos={pratos} setPratos={setPratos} />
     </div>
   ));
@@ -45,22 +61,11 @@ export function Pratos() {
     setSelectedPrato(null);
   }
 
-  function avaliarPrato(novaNota) {
-    const pratosAtualizados = pratos.map((prato) =>
-      prato.name === selectedPrato.name ? { ...prato, stars: novaNota } : prato
-    );
-
-    setPratos(pratosAtualizados);
-    localStorage.setItem("pratos", JSON.stringify(pratosAtualizados)); // Atualiza o localStorage
-    setSelectedPrato((prev) => ({ ...prev, stars: novaNota })); // Atualiza o prato selecionado no modal
-  }
-
   return (
     <>
       <div className="pratos_tab">
         <h1>Receitas - {selectedType === "perda" ? "Perda de Peso" : selectedType === "ganho" ? "Ganho de Peso" : "Todas"}</h1>
 
-        {/* Botões para selecionar o tipo de prato */}
         <div className="filter_buttons">
           <button className={`button_filter ${selectedType === "perda" ? "current_filter" : ""}`} onClick={() => setSelectedType("perda")}>Perda de Peso</button>
           <button className={`button_filter ${selectedType === "todos" ? "current_filter" : ""}`} onClick={() => setSelectedType("todos")}>Todas</button>
@@ -89,9 +94,7 @@ export function Pratos() {
                   ))}
                 </div>
               </div>
-              <button className="delete_button" onClick={excluirPrato}>
-                Excluir Receita
-              </button>
+              <button className="delete_button" onClick={excluirPrato}>Excluir Receita</button>
             </div>
             <div className="prato_detalhes_text">
               <h2>{selectedPrato.name}</h2>

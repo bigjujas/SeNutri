@@ -1,0 +1,103 @@
+.time_tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+}
+
+.time_tab h1 {
+    font-size: 30px;
+    margin: 4vh;
+    font-weight: 700;
+}
+
+.time_tab h1 span {
+    color: #588157;
+    font-weight: 900;
+}
+
+.time_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3vh 6vh;
+}
+
+.time_container {
+    display: flex;
+    padding: 1vh;
+    color: white;
+    background-color: #588157;
+    border: #3752365d 3px solid;
+    border-radius: 1rem;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.time_container h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 2vh;
+    text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.time_container h3 {
+    background-color: #293f29;
+    border: 2px solid #283d28;
+    border-radius: 10px;
+    padding: 5px 20px;
+    margin: 3vh auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.time_container h3:hover {
+    cursor: pointer;
+    background-color: #3b643b;
+}
+
+.time_container img {
+    object-fit: contain;
+    height: 200px;
+    width: 200px;
+    border: #ffffffcc 2px solid;
+    border-radius: 10rem;
+    padding: 10px;
+    background-color: #293f2983;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.time_text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.time_icons {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+@media screen and (max-width:450px) {
+
+    .time_tab h1 {
+        font-size: 22px;
+        text-align: center;
+        height: fit-content;
+    }
+
+    .time_grid {
+        margin: 3.5vh;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5vh;
+    }
+
+    .main_button {
+        font-size: 16px;
+    }
+
+}

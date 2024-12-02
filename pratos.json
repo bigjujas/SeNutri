@@ -1,66 +1,76 @@
-[
-  {
-    "name": "Strogonoff de Cria1",
-    "type": "ganho",
-    "description": "10 franguinho e um creme de leite com ARROZ (bom botar batata palha)",
-    "calories": 1000,
-    "image": "https://simplelivingrecipes.com/wp-content/uploads/2020/02/Brazilian-Stroganoff-.jpg",
-    "stars": 0
-  },
-  {
-    "name": "Strogonoff de Cria2",
-    "type": "ganho",
-    "description": "10 franguinho e um creme de leite com ARROZ (bom botar batata palha)",
-    "calories": 1000,
-    "image": "https://simplelivingrecipes.com/wp-content/uploads/2020/02/Brazilian-Stroganoff-.jpg",
-    "stars": 0
-  },
-  {
-    "name": "Strogonoff de Cria3",
-    "type": "ganho",
-    "description": "10 franguinho e um creme de leite com ARROZ (bom botar batata palha)",
-    "calories": 1000,
-    "image": "https://simplelivingrecipes.com/wp-content/uploads/2020/02/Brazilian-Stroganoff-.jpg",
-    "stars": 0
-  },
-  {
-    "name": "Strogonoff de Cria4",
-    "type": "ganho",
-    "description": "10 franguinho e um creme de leite com ARROZ (bom botar batata palha)",
-    "calories": 1000,
-    "image": "https://simplelivingrecipes.com/wp-content/uploads/2020/02/Brazilian-Stroganoff-.jpg",
-    "stars": 0
-  },
-  {
-    "name": "Salada de Cria",
-    "type": "perda",
-    "description": "Saladinha cheia de coisas verdes",
-    "calories": 100,
-    "image": "https://images.ecycle.com.br/wp-content/uploads/2022/01/19181441/anna-pelzer-IGfIGP5ONV0-unsplash-scaled.jpg.webp",
-    "stars": 0
-  },
-  {
-    "name": "Salada de Cria2",
-    "type": "perda",
-    "description": "Saladinha cheia de coisas verdes",
-    "calories": 100,
-    "image": "https://images.ecycle.com.br/wp-content/uploads/2022/01/19181441/anna-pelzer-IGfIGP5ONV0-unsplash-scaled.jpg.webp",
-    "stars": 0
-  },
-  {
-    "name": "Salada de Cria3",
-    "type": "perda",
-    "description": "Saladinha cheia de coisas verdes",
-    "calories": 100,
-    "image": "https://images.ecycle.com.br/wp-content/uploads/2022/01/19181441/anna-pelzer-IGfIGP5ONV0-unsplash-scaled.jpg.webp",
-    "stars": 0
-  },
-  {
-    "name": "Salada de Cria4",
-    "type": "perda",
-    "description": "Saladinha cheia de coisas verdes",
-    "calories": 100,
-    "image": "https://images.ecycle.com.br/wp-content/uploads/2022/01/19181441/anna-pelzer-IGfIGP5ONV0-unsplash-scaled.jpg.webp",
-    "stars": 0
-  }
-]
+{
+  "pratos": [
+    {
+      "name": "Strogonoff de Cria1",
+      "type": "ganho",
+      "description": "10 franguinho e um creme de leite com ARROZ (bom botar batata palha)",
+      "calories": 1000,
+      "image": "https://simplelivingrecipes.com/wp-content/uploads/2020/02/Brazilian-Stroganoff-.jpg",
+      "stars": 0,
+      "id": "a953"
+    },
+    {
+      "name": "Strogonoff de Cria2",
+      "type": "ganho",
+      "description": "10 franguinho e um creme de leite com ARROZ (bom botar batata palha)",
+      "calories": 1000,
+      "image": "https://simplelivingrecipes.com/wp-content/uploads/2020/02/Brazilian-Stroganoff-.jpg",
+      "stars": 0,
+      "id": "228c"
+    },
+    {
+      "name": "Strogonoff de Cria3",
+      "type": "ganho",
+      "description": "10 franguinho e um creme de leite com ARROZ (bom botar batata palha)",
+      "calories": 1000,
+      "image": "https://simplelivingrecipes.com/wp-content/uploads/2020/02/Brazilian-Stroganoff-.jpg",
+      "stars": 0,
+      "id": "6976"
+    },
+    {
+      "name": "Strogonoff de Cria4",
+      "type": "ganho",
+      "description": "10 franguinho e um creme de leite com ARROZ (bom botar batata palha)",
+      "calories": 1000,
+      "image": "https://simplelivingrecipes.com/wp-content/uploads/2020/02/Brazilian-Stroganoff-.jpg",
+      "stars": 0,
+      "id": "45ff"
+    },
+    {
+      "name": "Salada de Cria",
+      "type": "perda",
+      "description": "Saladinha cheia de coisas verdes",
+      "calories": 100,
+      "image": "https://images.ecycle.com.br/wp-content/uploads/2022/01/19181441/anna-pelzer-IGfIGP5ONV0-unsplash-scaled.jpg.webp",
+      "stars": 0,
+      "id": "788a"
+    },
+    {
+      "name": "Salada de Cria2",
+      "type": "perda",
+      "description": "Saladinha cheia de coisas verdes",
+      "calories": 100,
+      "image": "https://images.ecycle.com.br/wp-content/uploads/2022/01/19181441/anna-pelzer-IGfIGP5ONV0-unsplash-scaled.jpg.webp",
+      "stars": 0,
+      "id": "a33b"
+    },
+    {
+      "name": "Salada de Cria3",
+      "type": "perda",
+      "description": "Saladinha cheia de coisas verdes",
+      "calories": 100,
+      "image": "https://images.ecycle.com.br/wp-content/uploads/2022/01/19181441/anna-pelzer-IGfIGP5ONV0-unsplash-scaled.jpg.webp",
+      "stars": 0,
+      "id": "1425"
+    },
+    {
+      "name": "Salada de Cria4",
+      "type": "perda",
+      "description": "Saladinha cheia de coisas verdes",
+      "calories": 100,
+      "image": "https://images.ecycle.com.br/wp-content/uploads/2022/01/19181441/anna-pelzer-IGfIGP5ONV0-unsplash-scaled.jpg.webp",
+      "stars": 0,
+      "id": "5312"
+    }
+  ]
+}

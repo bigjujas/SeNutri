@@ -267,3 +267,93 @@
   padding: 10px;
   border-radius: 15px;
 }
+@media screen and (max-width:450px) {
+
+  .add_modal {
+    width: 70vw; 
+    height: auto; 
+    padding: 2vh; 
+}
+
+.add_modal h1 {
+    font-size: 18px; 
+    padding: 1vh; 
+    margin-bottom: 2vh; 
+}
+
+.add_modal p input {
+    width: 100%; 
+    max-width: 100%; 
+}
+
+.add_modal .modal_buttons {
+    flex-direction: column; 
+    gap: 1vh; 
+    width: 100%; 
+}
+
+.modal_buttons input {
+    font-size: 16px; 
+    padding: 1vh; 
+}
+
+/* MODAL DO PRATO */
+
+
+    .prato_detalhes {
+      flex-direction: column;
+      height: 70vh;
+      width: 100%;
+    }
+  
+    .prato_detalhes_left {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  
+    .prato_detalhes_left h1 {
+      font-size: 1.5rem;
+      padding: 0.5rem;
+      border-radius: 0.5rem 0.5rem 0px 0px;
+    }
+  
+    .prato_detalhes img {
+      width: 100%;
+      height: 20vh;
+      object-fit: cover;
+      border-radius: 0.5rem;
+    }
+  
+    .prato_detalhes_text {
+      padding: 1rem;
+      border-radius: 0px 0px 0.5rem 0.5rem;
+    }
+  
+    .prato_detalhes_text h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    .prato_detalhes_text h3 {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+  
+    .prato_detalhes_text p {
+      font-size: 1rem;
+    }
+  
+    .avaliacao {
+      font-size: 1.2rem;
+    }
+  
+    .avaliacao_estrelas span {
+      font-size: 2rem;
+    }
+  
+    .delete_button {
+      font-size: 0.9rem;
+      padding: 0.6rem;
+    }
+  
+}

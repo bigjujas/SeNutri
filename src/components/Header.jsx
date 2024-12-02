@@ -12,7 +12,7 @@ export function Header() {
             <li><Link draggable="false" to="/">Home</Link></li>
             <li><Link draggable="false" to="/pratos">Pratos</Link></li>
             <li><Link draggable="false" to="/IMC">Monte sua Dieta</Link></li>
-            <li><a href="">Time</a></li>
+            <li><Link draggable="false" to="/Time">Time</Link></li>
           </ul>
         </nav>
       </header>

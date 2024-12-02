@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Pratos from "./Pratos"
 import IMC from "./IMC"
+import Time from "./Time"
 import "./App.css"
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
         {/* Outras rotas */}
         <Route path="/pratos" element={<Pratos />} />
         <Route path="/IMC" element={<IMC />} />
+        <Route path="/Time" element={<Time />} />
       </Routes>
       <Footer />
     </Router>
