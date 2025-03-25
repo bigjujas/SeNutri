@@ -1,7 +1,7 @@
 {
   "pratos": [
     {
-      "name": "Strogonoff de Cria1",
+      "name": "Strogonoff",
       "type": "ganho",
       "description": "10 franguinho e um creme de leite com ARROZ (bom botar batata palha)",
       "calories": 1000,
@@ -10,7 +10,7 @@
       "id": "a953"
     },
     {
-      "name": "Strogonoff de Cria2",
+      "name": "Strogonoff",
       "type": "ganho",
       "description": "10 franguinho e um creme de leite com ARROZ (bom botar batata palha)",
       "calories": 1000,
@@ -19,7 +19,7 @@
       "id": "228c"
     },
     {
-      "name": "Strogonoff de Cria3",
+      "name": "Strogonoff",
       "type": "ganho",
       "description": "10 franguinho e um creme de leite com ARROZ (bom botar batata palha)",
       "calories": 1000,
@@ -28,7 +28,7 @@
       "id": "6976"
     },
     {
-      "name": "Strogonoff de Cria4",
+      "name": "Strogonoff",
       "type": "ganho",
       "description": "10 franguinho e um creme de leite com ARROZ (bom botar batata palha)",
       "calories": 1000,
@@ -37,7 +37,7 @@
       "id": "45ff"
     },
     {
-      "name": "Salada de Cria",
+      "name": "Salada",
       "type": "perda",
       "description": "Saladinha cheia de coisas verdes",
       "calories": 100,
@@ -46,7 +46,7 @@
       "id": "788a"
     },
     {
-      "name": "Salada de Cria2",
+      "name": "Salada",
       "type": "perda",
       "description": "Saladinha cheia de coisas verdes",
       "calories": 100,
@@ -55,7 +55,7 @@
       "id": "a33b"
     },
     {
-      "name": "Salada de Cria3",
+      "name": "Salada",
       "type": "perda",
       "description": "Saladinha cheia de coisas verdes",
       "calories": 100,
@@ -64,22 +64,13 @@
       "id": "1425"
     },
     {
-      "name": "Salada de Cria4",
+      "name": "Salada",
       "type": "perda",
       "description": "Saladinha cheia de coisas verdes",
       "calories": 100,
       "image": "https://images.ecycle.com.br/wp-content/uploads/2022/01/19181441/anna-pelzer-IGfIGP5ONV0-unsplash-scaled.jpg.webp",
       "stars": 0,
       "id": "5312"
-    },
-    {
-      "id": "afa9",
-      "name": "aaa",
-      "type": "perda",
-      "description": "fasfsa",
-      "calories": 123,
-      "image": "fsafsa",
-      "stars": 0
     }
   ]
 }

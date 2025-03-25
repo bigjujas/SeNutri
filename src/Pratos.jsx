@@ -13,32 +13,26 @@ export function Pratos() {
 
   useEffect(() => {
     async function fetchPratos() {
-      const response = await fetch("http://localhost:3000/pratos");
+      const response = await fetch('/pratos.json');
       const data = await response.json();
-      setPratos(data);
+      setPratos(data.pratos);  // Ajuste para acessar a chave 'pratos' do JSON
     }
     fetchPratos();
   }, []);
 
+  // Função para excluir prato
   async function excluirPrato() {
-    // Para excluir o prato, podemos usar o nome como identificador, mas isso pode não ser ideal se houver pratos com o mesmo nome
-    const pratoParaExcluir = pratos.find(prato => prato.name === selectedPrato.name);
-    if (pratoParaExcluir) {
-      await fetch(`http://localhost:3000/pratos/${pratoParaExcluir.id}`, { method: "DELETE" });
-      const pratosAtualizados = pratos.filter((prato) => prato.name !== selectedPrato.name);
-      setPratos(pratosAtualizados);
-      setSelectedPrato(null);
-      setOpen(false);
-    }
+    // Filtrar o prato que queremos excluir
+    const pratosAtualizados = pratos.filter((prato) => prato.name !== selectedPrato.name);
+    setPratos(pratosAtualizados);
+    setSelectedPrato(null);
+    setOpen(false);
   }
 
+  // Função para avaliar prato
   async function avaliarPrato(novaNota) {
+    // Atualizar a nota do prato selecionado
     const pratoAtualizado = { ...selectedPrato, stars: novaNota };
-    await fetch(`http://localhost:3000/pratos/${selectedPrato.id}`, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(pratoAtualizado),
-    });
     const pratosAtualizados = pratos.map((prato) =>
       prato.name === selectedPrato.name ? pratoAtualizado : prato
     );
@@ -46,15 +40,18 @@ export function Pratos() {
     setSelectedPrato(pratoAtualizado);
   }
 
+  // Garantir que a comparação do filtro funcione corretamente
   const pratosFiltrados = selectedType === "todos"
     ? pratos
     : pratos.filter(prato => prato.type === selectedType);
 
-  const itemsPratos = pratosFiltrados.map((prato) => (
-    <div key={prato.id} onClick={() => { setSelectedPrato(prato); setOpen(true); }}>
-      <Prato prato={prato} pratos={pratos} setPratos={setPratos} />
-    </div>
-  ));
+  const itemsPratos = Array.isArray(pratosFiltrados) && pratosFiltrados.length > 0
+    ? pratosFiltrados.map((prato) => (
+        <div key={prato.id} onClick={() => { setSelectedPrato(prato); setOpen(true); }}>
+          <Prato prato={prato} pratos={pratos} setPratos={setPratos} />
+        </div>
+      ))
+    : <p>Não há pratos disponíveis para este filtro.</p>;
 
   function adicionarPrato() {
     setOpen(true);
